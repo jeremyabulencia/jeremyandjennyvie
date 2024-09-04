@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.fixed-image {
+    position: fixed;
+    width: 50px; /* Width of the fixed images */
+    height: 100%; /* Height covers the full viewport */
+    background-size: cover;
+    z-index: 5;
+}
+
+.fixed-image.left {
+    left: 0;
+    background-image: url('path_to_your_left_image.jpg'); /* Set your image path here */
+}
+
+.fixed-image.right {
+    right: 0;
+    background-image: url('path_to_your_right_image.jpg'); /* Set your image path here */
+}
+
+.content {
+    margin: 0 60px; /* Add margin to the content so it doesn't overlap with fixed images */
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}
+
+p {
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .fixed-image {
+        width: 40px; /* Adjust size for mobile */
+    }
+
+    .content {
+        margin: 0 40px; /* Adjust margin for mobile */
+    }
+}
