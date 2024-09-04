@@ -71,6 +71,11 @@ button:hover {
     background-color: #0056b3;
 }
 
+#unisonContainer {
+    height:900px;
+    width: 100%;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .fixed-image {
