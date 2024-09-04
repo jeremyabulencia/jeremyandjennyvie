@@ -1,0 +1,25 @@
+#countdown {
+    width: auto;
+    ul {
+        padding:0px;
+        display: flex;
+        list-style-type: disc;
+        li {
+            width: auto;
+            margin:auto;
+            display:inline;
+            padding:5px;
+
+            .nums{
+                padding: 20px 20px;
+                margin:3px 0px;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    
+}
