@@ -93,7 +93,8 @@ button:hover {
 
 #unisonContainer{
     position:absolute;
-    bottom:100px;
+    left:10%;
+    bottom:50px;
     /* z-index: 1; */
     width: 100%;
 }

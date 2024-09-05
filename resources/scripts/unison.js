@@ -6,6 +6,7 @@
 
         return this.each(function() {
             var $window = $(window);
+            var $body = $('body');
             var $containerElement = $(this);
             var $containerHalfWidth = settings.mergePoint;
             var $leftElement = $(this).find('.left-element');
@@ -41,7 +42,7 @@
                 console.log(scrollTopValue);
                 $unisonContainerWidth = $containerElement.width();
                 $containerHalfWidth = ($unisonContainerWidth/2)-$leftElement.find('img').width();
-                if (scrollTopValue>=0 && scrollTopValue <= $containerHalfWidth) {
+                if (scrollTopValue >= 0 && scrollTopValue <= $containerHalfWidth) {
                     $leftElement.css("left",scrollTopValue);
                     $rightElement.css("right",scrollTopValue);
                 } else {
@@ -50,21 +51,21 @@
                 }            
             }
 
-            positioning($scrollTop*.6);
+            positioning($scrollTop/2);
 
             $(window).scroll(function () {
                 $scrollTop = $window.scrollTop();
                 $leftPosition = $scrollTop;
                 $rightPosition = $scrollTop;
                 
-                positioning($scrollTop*.6);
+                positioning($scrollTop/2);
             });
 
             $(window).resize(function() {
                 $scrollTop = $window.scrollTop();
                 $containerHalfWidth = settings.mergePoint;
 
-                positioning($scrollTop*.6);
+                positioning($scrollTop/2);
             })
         });
     }
