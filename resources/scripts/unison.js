@@ -39,7 +39,6 @@
 
             // animation
             function positioning(scrollTopValue){
-                console.log(scrollTopValue);
                 $unisonContainerWidth = $containerElement.width();
                 $containerHalfWidth = ($unisonContainerWidth/2)-$leftElement.find('img').width();
                 if (scrollTopValue >= 0 && scrollTopValue <= $containerHalfWidth) {
