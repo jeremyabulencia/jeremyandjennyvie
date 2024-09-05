@@ -3,49 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeremy and Jennyvie Wedding</title>
+    <title>Jeremy and Jennyvie</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="resources/styles/countdown.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="scripts.js"></script>
     <script src="resources/scripts/countdown.js"></script>
     <script src="resources/scripts/unison.js"></script>
 </head>
 <body>
-    <div class="fixed-image left"></div>
-    <div class="fixed-image right"></div>
-    
-
-    <div class="content">
-        
-        <header>
-            <h1>Join Us for a Beautiful Wedding Ceremony</h1>
-        </header>
-        <div id="countdown"></div>
-        
-        <section>
-            <h2>Details</h2>
-            <p>Date: January 4, 2025</p>
-            <p>Location: The Grand Ballroom, 123 Wedding St, Celebration City</p>
-            <p>Time: 1:00 PM - 8:00 PM</p>
-        </section>
-        <section>
-            <h2>RSVP</h2>
-            <p>Please confirm your attendance by May 1, 2024.</p>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        
-
+    <div class="containerHeader"></div>
+    <div class="container">
+        <h1>Timeline Diagram</h1>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Event 1</h2>
+                    <p>Description of Event 1.</p>
+                    <span class="date">January 2020</span>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Wedding Ceremony</h2>
+                    <p>Our Lady of Perpetural Help</p>
+                    <p>2010 Mayor Lorenzo L. Dacanay Ave, San Fernando, La Union</p>
+                    <span class="date">January 4, 2025 1:00 PM</span>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Venue</h2>
+                    <p>Vista La Vita</p>
+                    <p>Dacanay St., San Fernando, La Union</p>
+                    <span class="date">January 4, 2025 4:00 PM</span>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Attire</h2>
+                    <p>Description of Event 4.</p>
+                    <span class="date">September 2021</span>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="unisonContainer">
         <div class="unison">
             <div class="left-element"></div>
             <div class="right-element"></div>
         </div>
-    </div>  
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
