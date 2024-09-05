@@ -22,7 +22,7 @@
             $containerElement.css({
                 "position":"fixed",
                 "margin":"auto",
-                "width":"80%",
+                "width":"100%",
                 "display":"inline",
             });
             $leftElement.css({
@@ -51,21 +51,21 @@
                 }            
             }
 
-            positioning($scrollTop/2);
+            positioning($scrollTop/(($body.height()-200)/$body.width()));
 
             $(window).scroll(function () {
                 $scrollTop = $window.scrollTop();
                 $leftPosition = $scrollTop;
                 $rightPosition = $scrollTop;
                 
-                positioning($scrollTop/2);
+                positioning($scrollTop/(($body.height()-200)/$body.width()));
             });
 
             $(window).resize(function() {
                 $scrollTop = $window.scrollTop();
                 $containerHalfWidth = settings.mergePoint;
 
-                positioning($scrollTop/2);
+                positioning($scrollTop/(($body.height()-200)/$body.width()));
             })
         });
     }
