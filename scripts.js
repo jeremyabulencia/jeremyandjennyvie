@@ -23,5 +23,8 @@ $(document).ready(function() {
     });
 
     // unison plugin
-    $('.unison').mergeElements();
+    $('.unison').unison({
+        leftImg:"resources/images/groom.png",
+        rightImg:"resources/images/bride.png",
+    });
 });
