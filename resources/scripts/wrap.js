@@ -16,38 +16,64 @@
                     "left":"0px",
                     "width" :$window.width(),
                     "height":$window.height(),
-                    "background-color":"black",
+                    "background-color":"#000000",
                     "opacity":"0.92",
                     "z-index":"1000",
                     "margin":"auto",
                 });
-                $this.append('<div class="dialog"><div class="dialog-box"><div class="dialog-box-container"><p class="dialog-box-message">You Are Cordially Invited.</p> <button class="dialog-box-button">Open</button></div></div></div>');
+                $this.append('<div class="dialog"><div class="dialog-box"><div class="dialog-box-container"><p class="dialog-box-message">You Are Cordially Invited.</p> <button class="dialog-box-button">Open Invitation</button></div></div></div>');
+                var $dialogBoxLeftPosition = ($window.width()*.35)+"px";
+                var $dialogBoxWidthPercent = "30%";
+                if ($window.width() < 750) {
+                    $dialogBoxWidthPercent = "80%";
+                    $dialogBoxLeftPosition = ($window.width()*.1)+"px";
+                }
                 $('.dialog-box').css({
                     "position":"absolute",
                     "top":($window.height()*.3)+"px",
-                    "left":($window.width()*.3)+"px",
+                    "left":$dialogBoxLeftPosition,
                     "background-color":"white",
-                    "width":"30%",
+                    "width":$dialogBoxWidthPercent,
                     "height":$window.height()*.35,
+                    "border-radius":"3px",
+                    "background-image":"url('resources/images/wrap-background-leaves.jpg')",
+                    "background-position":"auto",
+                    "background-size":"cover",
+                    "box-shadow": "0 0 5px #808000",
                 })
                 $('.dialog-box-container').css({
                     "width":"80%",
                     "margin":"auto",
                     "margin-top":($('.dialog-box').height()*.3)+"px",
                     "text-align":"center",
-                    "opacity":"10"
+                    "opacity":"10",
                 })
                 $('.dialog-box-message').css({
-                    "font-family":"Lucida Console",
+                    "font-family":"Vintage",
+                    "font-size":"35px",
+                    "font-weight":"bolder",
+                    "color":"olive",
                     "margin":"auto",
+                    "text-shadow": "-1px -1px 1px green",
                 })
                 $('.dialog-box-button').css({
                     "margin-top":"10px",
                     "background-color":"green",
-                    "color":"white",
+                    "color":"olive",
+                    "font-weight":"bold",
+                    "text-shadow":"1px 1px 3px black",
                     "padding":"5px 3px",
-                    "z-index":"10"
+                    "z-index":"10",
+                    "border-radius":"3px",
+                    "padding":"5px 15px",
+                    "border-color":"yellowgreen",
+                    "box-shadow": "1px 1px 3px olive",
                 })
+                $('.dialog-box-button').mouseenter(function(){
+                    $(this).css('color','white');
+                }).mouseleave(function(){
+                    $(this).css('color','olive');
+                });
             }
             
             wrap();
